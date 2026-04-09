@@ -166,7 +166,7 @@ a.btn_circle .icon .icon{
 
 .dec_cloud img{
     position: absolute;
-    animation: uptodown-play 1.5s ease-in-out infinite alternate;
+    animation: uptodown-play 2s ease-in-out infinite alternate;
 }
 
 .uptodown-play{
@@ -306,7 +306,6 @@ section{
     overflow: hidden;
     background: transparent;
     filter: drop-shadow(0 0 8px rgba(0,0,0,0.25));
-    /*0604新增*/animation: uptodown-play 1.4s ease-in-out infinite alternate;
 }
 
 .dec_island .btn_map .icon{
@@ -530,10 +529,18 @@ section{
 }
 
 .container_banner .item_banner{
-    border-radius: 0.769rem;
+    /*border-radius: 0.769rem;*/
     overflow: hidden;
+    width: 100%;     /* ＡＩ新增 600px */
+    height: 500px;     /* 直接在這裡改為 600px */
 }
-
+/* ＡＩ新增*/
+.container_banner .item_banner img.pc_block {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 讓圖片自動充滿 600px 高度，不變形 */
+}
+/* ＡＩ新增 600px */
 .section_process{
     text-align: center;
     background-repeat: no-repeat;
@@ -1671,5 +1678,616 @@ section{
     }
     .container {
         width: 65%;
+    }
+}
+
+
+/*AI新增的語言按鈕*/
+.header_menu .menu_content .btn_lang{
+    flex-direction: row;
+    align-items: center;
+}
+
+.header_menu .menu_content .btn_lang .btn_langPill{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 0.16em 8px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(51,51,51,0.18);
+    vertical-align: middle;
+    transform: translateY(-2px);
+}
+
+.header_menu .menu_content .btn_lang .btn_langIcon{
+    width: 1.35em;
+    height: 1.35em;
+    padding: 0.16em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_menu .menu_content .btn_lang .btn_langIcon svg{
+    width: 100%;
+    height: 100%;
+}
+
+.header_menu .menu_content .btn_lang ul{
+    width: 10em;
+    top: 2.6em;
+}
+
+.header_menu .menu_content .btn_lang .btn_langArrow{
+    width: 0.9em;
+    height: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transform: translateY(0.02em);
+}
+
+.header_menu .menu_content .btn_lang .btn_langArrow svg{
+    width: 100%;
+    height: 100%;
+}
+/*AI新增的語言按鈕*/
+
+
+a.btn_AboutMe{
+    font-size: 0.9rem;
+    color: #fff;
+    background: #A67B4D;
+    transition: all .3s ease;
+    box-shadow: 0 2px 12px rgba(51,51,51,0.18);
+    border-radius: 999px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*a.btn_AboutMe .icon{
+    width: 1.846rem;
+    margin-left: 0.076rem;
+    transition: all .3s ease;
+}*/
+
+a.btn_AboutMe:hover,.page .section_media a.btn_circle:hover .icon{
+    background: #FDD6AC;
+}
+
+a.btn_AboutMe:active,.page .section_media a.btn_circle:active .icon{
+    background: #E4B98A;
+}
+
+
+a.btn_Resume{
+    font-size: 0.9rem;
+    color: #fff;
+    background: #A67B4D;
+    transition: all .3s ease;
+    box-shadow: 0 2px 12px rgba(51,51,51,0.18);
+    border-radius: 999px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+/*a.btn_Resume .icon{
+    width: 1.846rem;
+    margin-left: 0.076rem;
+    transition: all .3s ease;
+}*/
+
+/*AI新增的作品集介紹*/
+
+/*AI0324更改開始*/
+.section_kv .item_content .kv_actionBtns{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.section_uiux .item_workList{
+    margin-top: 1.25rem;
+    gap: 1.25rem;
+}
+
+.section_uiux .item_workList .work_item{
+    grid-template-columns: 62% 1fr;
+    gap: 8px;
+    align-items: stretch;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.section_uiux .item_workList .work_pic{
+    border: 1px solid #cfd9e5;
+    border-radius: 8px;
+    aspect-ratio: auto;
+}
+
+.section_uiux .item_workList .work_text{
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 1.15rem 1.3rem;
+}
+
+.section_uiux .item_workList .work_text .title{
+    color: #284870;
+    font-size: 1em;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.section_uiux .item_workList .work_text .desc{
+    margin-top: 0.7rem;
+    color: #2b2b2b;
+    font-size: 0.82em;
+    line-height: 1.55;
+}
+
+@media screen and (max-width: 767px){
+    .section_uiux .item_workList .work_item{
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .section_uiux .item_workList .work_text{
+        padding: 1rem;
+    }
+
+    .section_uiux .item_workList .work_text .title{
+        font-size: 1em;
+    }
+}
+/*AI0324更改結束*/
+
+.section_uiux .item_workList{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.section_uiux .item_workList .work_item{
+    transform: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(51,51,51,0.12);
+}
+
+.section_uiux .item_workList .work_pic{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.section_uiux .item_workList .work_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section_uiux .item_workList .work_text{
+    text-align: left;
+    color: #284870;
+    background: transparent;
+    padding: 0.9rem;
+    cursor: pointer;
+}
+
+.section_uiux .item_workList .work_text .desc{
+    margin-top: 0.35rem;
+    color: #4A4A4A;
+}
+
+.section_uiux .item_workList .work_item:hover .work_text{
+    color: #245BA1;
+}
+
+@media screen and (min-width: 768px){
+    .section_uiux .item_workList{
+        gap: 1.1rem;
+    }
+
+    .section_uiux .item_workList .work_item{
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0;
+        padding: 0;
+        transition: all ease .3s;
+    }
+
+    .section_uiux .item_workList .work_item:hover{ }
+}
+
+/*AI新增的作品集介紹*/
+
+<style>
+    /* 數據卡片外框 */
+    .stats-card-container {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 40px 60px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* 輕微陰影增加層次感 */
+        max-width: 800px;
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stats-content {
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        gap: 20px;
+    }
+
+    /* 左側文字 */
+    .stats-text-left {
+        text-align: left;
+    }
+
+    .stats-year {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .stats-label {
+        font-size: 1.8rem;
+        color: #000;
+        font-weight: 700;
+    }
+
+    /* 中間大數字 */
+    .stats-number-wrapper {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .stats-huge-number {
+        font-size: 8rem; /* 超大數字 */
+        font-weight: 800;
+        color: #b08d63; /* 根據圖片調整的金色/棕色 */
+        line-height: 1;
+        font-variant-numeric: tabular-nums; /* 確保數字跳動時不抖動 */
+    }
+
+    .stats-unit {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #b08d63;
+        margin-left: 5px;
+    }
+
+    /* 右側文字 */
+    .stats-desc {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+        margin-left: 10px;
+    }
+
+    /* 行動裝置適應 */
+    @media (max-width: 768px) {
+        .stats-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .stats-text-left, .stats-text-right {
+            text-align: center;
+        }
+        .stats-huge-number {
+            font-size: 6rem;
+        }
+    }
+
+
+/* 總容器控制 */
+.data-cards-container {
+    max-width: 1160px;
+    margin: 50px auto;
+    display: flex;
+    gap: 32px; /* 兩卡片中間的 padding */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* 卡片主體 */
+.data-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 內容水平居中 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    min-height: 250px;
+}
+
+/* 三欄式佈局控制 */
+.card-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap; /* 核心：防止文字換行 */
+}
+
+/* 左右兩側文字：強制 20px */
+.card-column.left, .card-column.right {
+    font-size: 20px !important;
+    line-height: 1.5;
+    color: #333;
+}
+
+.card-column.left span, .card-column.right span {
+    font-size: 20px !important;
+    display: block;
+}
+
+/* 加粗字體樣式 */
+.label-bottom {
+    font-weight: 700;
+    color: #000;
+}
+
+/* 中間數字區域 */
+.card-column.center {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0 20px; /* 數字與兩邊文字的間距 */
+}
+
+/* 核心數字：強制 96px */
+.huge-number {
+    font-size: 96px !important;
+    font-weight: 800;
+    color: #b08d63; /* 金棕色 */
+    line-height: 1;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 百分比單位 */
+.unit {
+    font-size: 48px;
+    font-weight: 700;
+    color: #b08d63;
+    margin-left: 4px;
+}
+
+/* RWD 回應式設計 */
+@media (max-width: 1135px) {
+    .data-cards-container {
+        flex-direction: column; /* 寬度不足時垂直排列 */
+        align-items: center;
+    }
+    .data-card {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .huge-number {
+        font-size: 72px !important; /* 手機版稍縮小數字防止溢出 */
+    }
+    .card-column.left, .card-column.right {
+        font-size: 18px !important;
+    }
+}
+
+/* 圓圈數字 Icon 核心樣式 */
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;            /* 圓圈寬度 */
+    height: 32px;           /* 圓圈高度 */
+    background-color: #ffffff; /* 圓圈背景色：白色 */
+    color: #b08d63;         /* 數字顏色：金棕色 */
+    border-radius: 50%;     /* 變成正圓形 */
+    font-size: 18px;        /* 數字大小 */
+    font-weight: 800;       /* 數字粗細 */
+    margin-right: 12px;     /* 與右側文字的間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 輕微陰影，讓圓圈更立體 */
+    flex-shrink: 0;         /* 防止圓圈被文字擠壓變形 */
+}
+
+/* 確保容器內的文字與 Icon 垂直置中 */
+.tag-item {
+    display: flex;
+    align-items: center;
+    /*font-size: 20px;*/
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   AI 修改標註：僅針對 Banner 圖片設定 100% 寬度，不干擾其他元素
+   ========================================================================== */
+
+   .fullwidth-banner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.fullwidth-banner img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+/* 為了保持 RWD 圖片切換功能正常 */
+@media screen and (max-width: 767px) {
+    .fullwidth-banner .pc_block { display: none !important; }
+    .fullwidth-banner .m_block { display: block !important; }
+}
+
+@media screen and (min-width: 768px) {
+    .fullwidth-banner .m_block { display: none !important; }
+    .fullwidth-banner .pc_block { display: block !important; }
+}
+
+/* 2. 讓 Download Resumes 按鈕置中 */
+.kv_actionBtns.text-center {
+    display: flex !important;
+    justify-content: center !important; /* 確保按鈕在容器中水平置中 */
+    width: 100% !important;
+    margin-top: 2rem !important; /* 與上方文字維持間距 */
+}
+
+/* ==========================================================================
+   AI 修改標註：技能清單靠左對齊，且圓點 (3px, #52A47E) 在文字最左側
+   ========================================================================== */
+
+   .item_info .list_brown {
+    list-style: none;          /* 移除預設圓點 */
+    padding: 0;
+    margin: 0;
+    text-align: left;          /* 確保文字整體靠左 */
+}
+
+.item_info .list_brown li {
+    display: flex;
+    justify-content: flex-start; /* 內容物全部往左靠 */
+    align-items: center;         /* 圓點與文字垂直置中 */
+    margin-bottom: 8px;          /* 行與行的間距 */
+    color: #212121;              /* 保持原本文字顏色 */
+}
+
+/* AI 修改：使用 ::before 在文字左側加上 3px 綠色圓點 */
+.item_info .list_brown li::before {
+    content: "";
+    width: 8px;                 /* 圓點寬度 3px */
+    height: 8px;                /* 圓點高度 3px */
+    background-color: #52A47E;  /* 顏色 52A47E */
+    border-radius: 50%;         /* 圓形 */
+    display: inline-block;
+    margin-right: 12px;         /* 圓點與文字之間的間距 */
+    flex-shrink: 0;             /* 防止圓點被擠壓變形 */
+}
+
+
+/* ==========================================================================
+   AI 修改標註：修正圖片尺寸為 504x320px 且間距為 28px
+   ========================================================================== */
+
+   @media screen and (min-width: 768px) {
+    /* 1. 強制設定圖片容器的大小 */
+    .study-group-pic .pic {
+        width: 504px !important;
+        height: 320px !important;
+        margin-right: 28px !important; /* 與右邊文字的固定間距 */
+        flex-shrink: 0; /* 防止圖片被 flex 壓縮 */
+        overflow: hidden;
+    }
+
+    /* 2. 確保圖片填滿該尺寸而不變形 */
+    .study-group-pic .pic img {
+        width: 70% !important;
+        height: 70% !important;
+        object-fit: cover; /* 維持長方形比例裁切，不拉伸 */
+    }
+
+    /* 3. 確保 row 內的元素不要撐開，維持緊湊排列 */
+    .row_case {
+        display: flex;
+        align-items: flex-start; /* 文字與圖片頂部對齊，或用 center 居中 */
+        justify-content: flex-start;
+    }
+}
+
+/* RWD：手機版自動回歸 100% 寬度以符合手機閱讀 */
+@media screen and (max-width: 767px) {
+    .study-group-pic .pic {
+        width: 100% !important;
+        height: auto !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px; /* 手機版改為向下間距 */
+    }
+}
+
+/* ==========================================================================
+   AI 修改標註：底部三個按鈕橫向排列，間距 28px
+   ========================================================================== */
+
+/* 1. 設定容器為 Flex 佈局 */
+.btn-flex-group {
+    display: flex !important;
+    flex-direction: row !important; /* 橫向排列 */
+    justify-content: flex-start;    /* 靠左對齊 (若要置中可改為 center) */
+    align-items: center;            /* 垂直居中 */
+    gap: 28px !important;           /* AI 指定：三個按鈕間距 28px */
+    flex-wrap: wrap;                /* 防止小螢幕時溢出，會自動換行 */
+}
+
+/* 2. 移除原本按鈕可能存在的 margin 避免干擾間距 */
+.btn-flex-group .btn_media {
+    margin: 0 !important;
+    display: flex !important;       /* 確保按鈕內文字與 icon 也是橫向 */
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;            /* 防止按鈕內文字斷行 */
+}
+
+/* 3. RWD：手機版自動微調 */
+@media screen and (max-width: 767px) {
+    .btn-flex-group {
+        gap: 16px !important;       /* 手機版縮小間距防止太擠 */
+        justify-content: center;    /* 手機版按鈕置中 */
+    }
+}
+
+/* ==========================================================================
+   AI 修改標註：Index 頁面 KV 按鈕置中
+   ========================================================================== */
+
+/* 1. 讓按鈕容器變為 Flex 並水平置中 */
+.home-kv-btns {
+    display: flex !important;
+    justify-content: center !important; /* 水平置中 */
+    align-items: center;
+    gap: 20px;                         /* 設定兩按鈕之間的間距 */
+    margin-top: 30px;                  /* 與上方文字的距離 */
+    width: 100%;
+}
+
+/* 2. 確保按鈕本身不會有額外的 float 影響置中 */
+.home-kv-btns .btn {
+    float: none !important;
+    display: inline-flex !important;
+    margin: 0 !important;              /* 統一由容器的 gap 控制間距 */
+}
+
+/* 3. 確保文字內容也是置中顯示 */
+.item_content.text-center {
+    text-align: center;
+}
+
+/* RWD：手機版如果寬度不足可改為垂直排列 (選用) */
+@media screen and (max-width: 576px) {
+    .home-kv-btns {
+        flex-direction: row;           /* 若手機版也想維持橫排則保留 row */
+        gap: 15px;
     }
 }
